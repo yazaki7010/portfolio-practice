@@ -1,10 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naoto Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d9dee7;
+      --accent: #1d4ed8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    header {
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    main {
+      padding-top: 24px;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    p + p,
+    ul {
+      margin-top: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .meta-list,
+    .entry-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .meta-item,
+    .entry {
+      padding: 0;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 24px, 760px);
+        padding-top: 32px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, I'm Naoto</h1>
-  <p>This is my first GitHub Pages site.</p>
+  <div class="container">
+    <header>
+      <h1>田舎者の底力を</h1>
+      <p class="subtitle">Naoto Yazaki / 静岡大学大学院総合科学技術研究科情報学専攻 修士1年</p>
+      <nav>
+        <a href="#about">自己紹介</a>
+        <a href="#research">研究内容</a>
+        <a href="#awards">受賞歴・実績</a>
+        <a href="#contact">連絡先</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>自己紹介</h2>
+        <p>山梨県出身。星野源、神社仏閣、料理、温泉が好きです。</p>
+        <p>社会と人の役に立つような研究をしています。</p>
+
+        <div class="meta-list">
+          <div class="meta-item">
+            <h3>所属</h3>
+            <p>莊司研究室</p>
+          </div>
+          <div class="meta-item">
+            <h3>関心</h3>
+            <p>日常の困りごとを解決するためのシステム設計 / ML / AI</p>
+          </div>
+          <div class="meta-item">
+            <h3>学歴</h3>
+            <p>静岡大学大学院 総合科学技術研究科 情報学専攻 基盤情報学コース</p>
+            <p class="label">2026.04 - Present</p>
+            <p>静岡大学 行動情報学科</p>
+            <p class="label">2022.04 - 2026.03</p>
+            <p>山梨県立甲府東高等学校</p>
+            <p class="label">2019.04 - 2022.03</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="research">
+        <h2>研究内容</h2>
+        <div class="entry-list">
+          <article class="entry">
+            <h3>商品への帰属確率による他商品との相対化に基づくその商品らしいレビュー文の抽出</h3>
+            <p>学部4年生の時に行った、他商品と比べた時の、ある商品の相対的な特徴に言及したレビュー文の抽出を目指す研究です。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2>受賞歴・実績</h2>
+        <div class="entry-list">
+          <div class="entry">
+            <h3>受賞歴</h3>
+            <ul>
+              <li>DEIM2026 学生プレゼンテーション賞</li>
+              <li>DBWS2025 最優秀発表賞</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <h3>実績</h3>
+            <ul>
+              <li>国内学会での口頭発表1件</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>連絡先</h2>
+        <p>Email: <a href="mailto:yazaki.naoto.22@shizuoka.ac.jp">yazaki.naoto.22@shizuoka.ac.jp</a></p>
+        <p>GitHub: <a href="https://github.com/yazaki7010">github.com/yazaki7010</a></p>
+        <p>このサイトは、研究活動と技術的な関心をまとめるポートフォリオとして随時更新していきます。</p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Naoto Portfolio
+    </footer>
+  </div>
 </body>
 </html>
